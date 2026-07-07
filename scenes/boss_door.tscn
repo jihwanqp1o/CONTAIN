@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://boss_door_scene"]
+
+[ext_resource type="Script" path="res://scenes/boss_door.gd" id="1_bdscript"]
+
+[node name="BossDoor" type="StaticBody2D"]
+script = ExtResource("1_bdscript")
+collision_layer = 5
+collision_mask = 0

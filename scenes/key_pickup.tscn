@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://key_pickup_scene"]
+
+[ext_resource type="Script" path="res://scenes/key_pickup.gd" id="1_kpscript"]
+
+[node name="KeyPickup" type="StaticBody2D"]
+script = ExtResource("1_kpscript")
+collision_layer = 0
+collision_mask = 0

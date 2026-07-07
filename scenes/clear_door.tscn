@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://clear_door_scene"]
+
+[ext_resource type="Script" path="res://scenes/clear_door.gd" id="1_cdscript"]
+
+[node name="ClearDoor" type="Area2D"]
+script = ExtResource("1_cdscript")

@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://ucqvghehlkdo"]
+
+[node name="Control" type="Control" unique_id=913325787]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=848340535]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.112101845, 0.112101845, 0.11210179, 0.003921569)
+
+[node name="Label" type="Label" parent="." unique_id=118373521]
+layout_mode = 0
+offset_left = -100.0
+offset_top = -80.0
+offset_right = -8.0
+offset_bottom = -57.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 48
+text = "GAME OVER"
+horizontal_alignment = 3
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=308554201]
+layout_mode = 0
+offset_left = -60.0
+offset_top = 20.0
+offset_right = 1.0
+offset_bottom = 51.0
+text = "다시 시"

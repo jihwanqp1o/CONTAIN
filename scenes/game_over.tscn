@@ -1,0 +1,117 @@
+[gd_scene format=3 uid="uid://bhh854wtqt1y6"]
+
+[ext_resource type="Script" uid="uid://f40lv8hhj058" path="res://scenes/game_over.gd" id="1_xeevv"]
+
+[node name="GameOver" type="Control" unique_id=504090582]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_xeevv")
+
+[node name="Background" type="ColorRect" parent="." unique_id=485011630]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.05, 0.0, 0.0, 1)
+
+[node name="DeadLabel" type="Label" parent="." unique_id=1208374719]
+layout_mode = 1
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -180.0
+offset_top = 60.0
+offset_right = 180.0
+offset_bottom = 155.0
+grow_horizontal = 2
+text = "사망"
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.9, 0.08, 0.08, 1)
+theme_override_font_sizes/font_size = 80
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=359204560]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -175.0
+offset_right = 200.0
+offset_bottom = 175.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+theme_override_constants/separation = 10
+
+[node name="SurvivalLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "생존 시간"
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.65, 0.65, 0.65, 1)
+theme_override_font_sizes/font_size = 16
+
+[node name="TimeLabel" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "00:00"
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 52
+
+[node name="BestTimeLabel" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "최고 기록: --:--"
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(1.0, 0.85, 0.2, 1)
+theme_override_font_sizes/font_size = 20
+
+[node name="KillerLabel" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "사망 원인:  알 수 없음"
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(1.0, 0.38, 0.28, 1)
+theme_override_font_sizes/font_size = 18
+
+[node name="KpSep" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="KpRunLabel" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "이번 런  +0 p"
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(0.4, 1.0, 0.65, 1)
+theme_override_font_sizes/font_size = 18
+
+[node name="KpTotalLabel" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "누적 지식 포인트:  0 p"
+horizontal_alignment = 1
+theme_override_colors/font_color = Color(1.0, 0.88, 0.35, 1)
+theme_override_font_sizes/font_size = 14
+
+[node name="Spacer" type="Control" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="RestartButton" type="Button" parent="VBoxContainer" unique_id=2071207417]
+unique_name_in_owner = true
+layout_mode = 2
+text = "재시작"
+
+[node name="MenuButton" type="Button" parent="VBoxContainer" unique_id=942074053]
+unique_name_in_owner = true
+layout_mode = 2
+text = "메인메뉴로"

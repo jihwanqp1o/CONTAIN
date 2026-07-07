@@ -1,0 +1,201 @@
+[gd_scene format=3 uid="uid://dp2604wrgve4x"]
+
+[ext_resource type="Script" uid="uid://cguqah7q3dqy7" path="res://scenes/player.gd" id="1_jdwh2"]
+[ext_resource type="AudioStream" uid="uid://c017d5hgfaeb4" path="res://assets/walking.mp3" id="4_fnuoy"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4ngp6"]
+radius = 29.84
+
+[node name="player" type="CharacterBody2D" unique_id=35609427]
+script = ExtResource("1_jdwh2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1131861297]
+position = Vector2(1, 2)
+shape = SubResource("CircleShape2D_4ngp6")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1308830906]
+
+[node name="working" type="AudioStreamPlayer2D" parent="." unique_id=1056244910]
+stream = ExtResource("4_fnuoy")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=153113402]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=717421059]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LeftBars" type="VBoxContainer" parent="CanvasLayer/Control" unique_id=1191595639]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 210.0
+offset_bottom = 90.0
+theme_override_constants/separation = 5
+
+[node name="FearBar" type="ProgressBar" parent="CanvasLayer/Control/LeftBars" unique_id=1992267734]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(195, 22)
+layout_mode = 2
+show_percentage = false
+
+[node name="FearLabel" type="Label" parent="CanvasLayer/Control/LeftBars/FearBar" unique_id=200000002]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+theme_override_colors/font_color = Color(1, 1, 1, 0.95)
+theme_override_font_sizes/font_size = 12
+text = "공포"
+vertical_alignment = 1
+
+[node name="StaminaBar" type="ProgressBar" parent="CanvasLayer/Control/LeftBars" unique_id=650970868]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(195, 22)
+layout_mode = 2
+value = 100.0
+show_percentage = false
+
+[node name="StaminaLabel" type="Label" parent="CanvasLayer/Control/LeftBars/StaminaBar" unique_id=200000004]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+theme_override_colors/font_color = Color(1, 1, 1, 0.95)
+theme_override_font_sizes/font_size = 12
+text = "스태미나"
+vertical_alignment = 1
+
+[node name="BatteryBar" type="ProgressBar" parent="CanvasLayer/Control/LeftBars" unique_id=1320531448]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(195, 22)
+layout_mode = 2
+value = 100.0
+show_percentage = false
+
+[node name="BatteryLabel" type="Label" parent="CanvasLayer/Control/LeftBars/BatteryBar" unique_id=200000006]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+theme_override_colors/font_color = Color(1, 1, 1, 0.95)
+theme_override_font_sizes/font_size = 12
+text = "배터리"
+vertical_alignment = 1
+
+[node name="Inventory" type="HBoxContainer" parent="CanvasLayer/Control" unique_id=1536149208]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -60.0
+offset_top = -70.0
+offset_right = 60.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Slot1" type="Panel" parent="CanvasLayer/Control/Inventory" unique_id=1487804565]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="Slot1Icon" type="TextureRect" parent="CanvasLayer/Control/Inventory/Slot1" unique_id=51010908]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 45.0
+offset_bottom = 45.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Slot2" type="Panel" parent="CanvasLayer/Control/Inventory" unique_id=1201201973]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="Slot2Icon" type="TextureRect" parent="CanvasLayer/Control/Inventory/Slot2" unique_id=16749184]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 45.0
+offset_bottom = 45.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="HPBar" type="Label" parent="CanvasLayer/Control" unique_id=351777218]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -80.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 0.2, 0.2, 1)
+theme_override_font_sizes/font_size = 40
+text = "♥"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TimerLabel" type="Label" parent="CanvasLayer/Control" unique_id=612832808]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -70.0
+offset_top = 10.0
+offset_right = 70.0
+offset_bottom = 40.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.9)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.8)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 20
+text = "00:00"
+horizontal_alignment = 1
+
+[node name="SneakLabel" type="Label" parent="CanvasLayer/Control" unique_id=1370958425]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -135.0
+offset_right = 100.0
+offset_bottom = -105.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.4, 0.9, 0.5, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.8)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 16
+text = "[ 은신 중 ]"
+horizontal_alignment = 1
+
+[node name="FadeOverlay" type="ColorRect" parent="CanvasLayer/Control" unique_id=1122798042]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0)

@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://co1f58inla1lq"]
+
+[ext_resource type="Script" uid="uid://cog8n7lplxm1v" path="res://scenes/box.gd" id="1_u764n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qleig"]
+size = Vector2(105, 79)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ks2v0"]
+polygon = PackedVector2Array(-58, -36, 45, -36, 46, 41, -57, 41)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ks2v0"]
+size = Vector2(131, 104)
+
+[node name="Box" type="StaticBody2D" unique_id=974482129]
+script = ExtResource("1_u764n")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=30330994]
+position = Vector2(-6, 0)
+scale = Vector2(0.20898436, 0.1621094)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=407432871]
+position = Vector2(-7, 2)
+shape = SubResource("RectangleShape2D_qleig")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=120249846]
+occluder = SubResource("OccluderPolygon2D_ks2v0")
+
+[node name="InteractArea" type="Area2D" parent="." unique_id=536850607]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea" unique_id=1365813694]
+position = Vector2(-7.5, 1)
+shape = SubResource("RectangleShape2D_ks2v0")
+debug_color = Color(0, 0.6, 0, 0.41960785)

@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://c0krh2bq8db2g"]
+
+[ext_resource type="Script" uid="uid://birrukek8nvqi" path="res://scenes/lurker.gd" id="1_dqd7j"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_i2shb"]
+radius = 36.84
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2n4f4"]
+radius = 500.0
+
+[node name="Lurker" type="CharacterBody2D" unique_id=892840964]
+motion_mode = 1
+script = ExtResource("1_dqd7j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=669609806]
+shape = SubResource("CircleShape2D_i2shb")
+
+[node name="DetectionArea" type="Area2D" parent="." unique_id=936536536]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=364317418]
+shape = SubResource("CircleShape2D_2n4f4")
+debug_color = Color(0.99999994, 0.008672535, 0.06872495, 0.41960785)
+
+[node name="StatusLabel" type="Label" parent="." unique_id=1489102450]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="AlertSound" type="AudioStreamPlayer2D" parent="." unique_id=1130710661]
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=491857157]
