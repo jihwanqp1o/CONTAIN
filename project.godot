@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="comgegi_game"
+config/name="CONTAIN"
 run/main_scene="uid://ccinr3xdp51kr"
 config/features=PackedStringArray("4.6", "Forward Plus")
 

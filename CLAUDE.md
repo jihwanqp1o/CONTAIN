@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-**CONTAIN** (프로젝트명: comgegi_game) is a 2D survival horror roguelike built with Godot 4.6.
+**CONTAIN** is a 2D survival horror roguelike built with Godot 4.6.
 
 **Core Identity:**
 - 제한된 자원과 환경에서 극도의 공포를 느끼는 생존 게임
